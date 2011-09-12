@@ -24,3 +24,11 @@ alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
+
+alias sc=script/console
+alias ss=script/server
+alias sg=script/generate
+alias f="cd ~/workspace/FastCustomer-web"
+
+alias dep="g push origin staging2 && cap staging2 deploy"
+alias proddep="g co master && g push origin master && cap production deploy"
