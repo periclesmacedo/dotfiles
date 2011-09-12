@@ -63,3 +63,9 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+export PATH=/usr/local/bin:$PATH
+eval "$(rbenv init -)"
+export NODE_PATH=/usr/local/lib/node_modules
+# load brew autocompletion
+fpath=(/usr/local/etc/bash_completion.d $fpath)
