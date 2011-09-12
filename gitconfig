@@ -2,3 +2,17 @@
   default = tracking
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[user]
+	name = Elomar Souza
+	email = elomar@elomar.me
+[alias]
+	s = status
+	co = checkout
+	d = diff
+	b = branch
+	a = add
+	f = fetch
+	c = commit
+	g = grep
+[color]
+	ui = true
