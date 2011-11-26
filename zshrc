@@ -17,9 +17,9 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+# bindkey -v
+# bindkey "^F" vi-cmd-mode
+# bindkey jj vi-cmd-mode
 
 # use incremental search
 bindkey "^R" history-incremental-search-backward
@@ -64,7 +64,7 @@ setopt CORRECT CORRECT_ALL
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 eval "$(rbenv init -)"
 export NODE_PATH=/usr/local/lib/node_modules
 # load brew autocompletion
