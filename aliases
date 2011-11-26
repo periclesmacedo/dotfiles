@@ -28,7 +28,13 @@ alias -g ONE="| awk '{ print \$1}'"
 alias sc=script/console
 alias ss=script/server
 alias sg=script/generate
-alias f="cd ~/workspace/FastCustomer-web"
 
-alias dep="g push origin staging2 && cap staging2 deploy"
-alias proddep="g co master && g push origin master && cap production deploy"
+alias r="rails"
+
+alias f="cd ~/workspace/FastCustomer-web"
+alias t="cd ~/workspace/transportefacil"
+alias w="cd ~/workspace/whistler"
+
+alias up="g push && be cap deploy"
+
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
