@@ -1,0 +1,25 @@
+
+;; ----- smex-history -----
+(
+ clojure-jack-in
+ package-install
+ shell-command
+ shell
+ package-list-packages
+ cd
+ 5x5
+)
+
+;; ----- smex-data -----
+(
+ (package-install . 4)
+ (package-list-packages . 2)
+ (slime-connect . 9)
+ (slime-reset . 1)
+ (slime-disconnect . 2)
+ (slime-repl . 2)
+ (slime . 3)
+ (shell . 1)
+ (shell-command . 1)
+ (clojure-jack-in . 1)
+)

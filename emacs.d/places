@@ -1,0 +1,7 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/elomar/.emacs.d/elpa/elisp-slime-nav-0.2/elisp-slime-nav-autoloads.el" . 793)
+ ("/Users/elomar/.emacs.d/elpa/slime-repl-20100404/slime-repl-autoloads.el" . 410)
+ ("/Users/elomar/.emacs.d/elpa/starter-kit-bindings-2.0.2/starter-kit-bindings-autoloads.el" . 2120)
+ ("/Users/elomar/.emacs.d/elpa/starter-kit-eshell-2.0.2/starter-kit-eshell-autoloads.el" . 1444)
+ ("/Users/elomar/.emacs.d/elpa/starter-kit-lisp-2.0.3/starter-kit-lisp-autoloads.el" . 1914)
+ ("/Users/elomar/workspace/rock/main.clj" . 95))
