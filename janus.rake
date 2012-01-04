@@ -1,1 +1,1 @@
-vim_plugin_task :bufexplorer, "http://www.vim.org/scripts/download_script.php?src_id=14208"
+vim_plugin_task :bufexplorer, "git://github.com/vim-scripts/bufexplorer.zip.git"

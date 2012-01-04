@@ -1,7 +1,5 @@
 # Autocomplete
 require "irb/completion"
-require "rubygems"
-require "pp"
 
 # Add all gems installed in the system to the $LOAD_PATH so they can be used in Rails console with Bundler
 if defined?(::Bundler)

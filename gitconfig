@@ -19,3 +19,4 @@
 	ui = true
 [core]
 	excludesfile = /Users/elomar/.gitignore_global
+	quotepath = false
