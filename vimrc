@@ -30,6 +30,8 @@ filetype plugin indent on       " load file type plugins + indentation
 
 set number
 set directory^=$HOME/.backup//  " move swp and ~ files do somewhere else
+set hidden                      " hides buffers instead of closing them
+nnoremap ; :
 
 " disable arrow keys
 map <up> <nop>
