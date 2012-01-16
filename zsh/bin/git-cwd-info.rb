@@ -31,7 +31,7 @@ def git_head_commit_id
 end
 
 def git_cwd_dirty
-  " ✗" unless git_repo_path == '.' || `git ls-files -mo`.strip.empty?
+  " ✗" unless git_repo_path == '.' || `git status --porcelain`.strip.empty?
 end
 
 def rebasing_etc
