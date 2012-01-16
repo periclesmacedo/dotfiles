@@ -16,29 +16,8 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-# vi mode
-# bindkey -v
-# bindkey "^F" vi-cmd-mode
-# bindkey jj vi-cmd-mode
-
 # use incremental search
 bindkey "^R" history-incremental-search-backward
-
-# add some readline keys back
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-
-# handy keybindings
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
-
-# expand functions in the prompt
-setopt prompt_subst
-
-# prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -46,26 +25,33 @@ setopt histignoredups
 # keep TONS of history
 export HISTSIZE=4096
 
-# look for ey config in project dirs
-export EYRC=./.eyrc
-
 # automatically pushd
 setopt auto_pushd
 export dirstacksize=5
-
-# awesome cd movements from zshkit
-setopt AUTOCD
-setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-setopt cdablevars
-
-# Try to correct command line spelling
-# setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
 export PATH=/usr/local/bin:/usr/local/share/python:$PATH
-eval "$(rbenv init -)"
 export NODE_PATH=/usr/local/lib/node_modules
 # load brew autocompletion
 fpath=(/usr/local/etc/bash_completion.d $fpath)
+
+# tips from peepcode setup 
+# http://blog.peepcode.com/blog/2012/my-command-line-prompt 
+
+# Colors
+autoload -U colors
+colors
+setopt prompt_subst
+
+# prompt
+PROMPT='[%~] '
+RPROMPT=' $(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+
+# a place for the local confs
+if [ -e "$HOME/.zshrc_local" ]; then
+  source "$HOME/.zshrc_local"
+fi
+
+eval "$(rbenv init -)"
