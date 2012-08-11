@@ -55,3 +55,4 @@ if [ -e "$HOME/.zshrc_local" ]; then
 fi
 
 eval "$(rbenv init -)"
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

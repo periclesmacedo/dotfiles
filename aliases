@@ -1,34 +1,13 @@
-alias emacs="/usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs -nw"
-alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
-alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
 alias g="git"
-alias s="bundle exec rspec"
-alias cuc="bundle exec cucumber"
-alias gi="gem install"
-alias giv="gem install -v"
-alias gci="git pull --rebase && rake && git push"
-alias tlf="tail -f"
+alias r="rails"
 alias b="bundle"
 alias be="bundle exec"
-alias bake="bundle exec rake"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
-alias staging='heroku run console --remote staging'
-alias production='heroku run console --remote production'
-
-alias sc=script/console
-alias ss=script/server
-alias sg=script/generate
-
-alias r="rails"
-
-alias t="cd ~/workspace/transportesimples"
-alias c="cd ~/workspace/clinica-simples/ && ./tmux.sh"
 
 alias up="g push && be cap deploy"
 

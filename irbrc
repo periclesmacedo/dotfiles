@@ -12,8 +12,3 @@ end
 
 IRB.conf[:AUTO_INDENT] = true
 
-# Use Pry everywhere
-require "rubygems"
-require 'pry'
-Pry.start
-exit
