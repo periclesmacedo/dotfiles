@@ -20,3 +20,5 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	quotepath = false
+[help]
+	autocorrect = 1

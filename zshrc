@@ -54,5 +54,9 @@ if [ -e "$HOME/.zshrc_local" ]; then
   source "$HOME/.zshrc_local"
 fi
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
+PATH="/usr/local/heroku/bin:$PATH"

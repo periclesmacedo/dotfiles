@@ -14,7 +14,10 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
+Bundle 'nono/vim-handlebars'
 Bundle 'Rename'
+Bundle 'VimClojure'
+Bundle 'rosstimson/scala-vim-support'
 
 " solarized theme
 Bundle 'altercation/vim-colors-solarized'
@@ -64,4 +67,15 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlP %%<cr>
+
+" Here's the vimclojure stuff. You'll need to adjust the NailgunClient
+" setting if you're on windows or have other problems.
+let vimclojure#FuzzyIndent=1
+let vimclojure#HighlightBuiltins=1
+let vimclojure#HighlightContrib=1
+let vimclojure#DynamicHighlighting=1
+let vimclojure#ParenRainbow=1
+let vimclojure#WantNailgun = 0
+let vimclojure#NailgunClient = $HOME . "/.vim/bundle/VimClojure/lib/vimclojure-nailgun-client/ng"
+autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 
