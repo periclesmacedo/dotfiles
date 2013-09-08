@@ -3,8 +3,8 @@
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [user]
-	name = Elomar Souza
-	email = elomar@elomar.me
+	name = Pericles Dantas
+	email = periclesmacedo@gmail.com
 [alias]
 	s = status
 	co = checkout
