@@ -68,6 +68,11 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlP %%<cr>
 
+"C-h,j,l,k navigate between split screens
+map <silent> <C-l> :wincmd l<cr> 
+map <silent> <C-h> :wincmd h<cr> 
+map <silent> <C-j> :wincmd j<cr> 
+map <silent> <C-k> :wincmd k<cr> 
 " Here's the vimclojure stuff. You'll need to adjust the NailgunClient
 " setting if you're on windows or have other problems.
 let vimclojure#FuzzyIndent=1
