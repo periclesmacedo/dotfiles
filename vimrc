@@ -18,6 +18,8 @@ Bundle 'nono/vim-handlebars'
 Bundle 'Rename'
 Bundle 'VimClojure'
 Bundle 'rosstimson/scala-vim-support'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
 
 " solarized theme
 Bundle 'altercation/vim-colors-solarized'
