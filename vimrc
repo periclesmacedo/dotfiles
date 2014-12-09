@@ -20,11 +20,12 @@ Bundle 'VimClojure'
 Bundle 'rosstimson/scala-vim-support'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+Bundle 'slim-template/vim-slim.git'
 
-" solarized theme
-Bundle 'altercation/vim-colors-solarized'
+" hybrid theme
+Bundle 'hybrid.vim'
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 " general config
 

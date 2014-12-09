@@ -2,6 +2,7 @@
 config/database.yml
 /log/*
 /tmp/*
+/backup/*
 **.swp
 .**.swp
 .netrwhist
