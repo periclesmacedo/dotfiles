@@ -40,6 +40,10 @@ fpath=(/usr/local/etc/bash_completion.d $fpath)
 # tips from peepcode setup 
 # http://blog.peepcode.com/blog/2012/my-command-line-prompt 
 
+#load RVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM functions
+
 # Colors
 autoload -U colors
 colors
@@ -57,6 +61,4 @@ fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
 PATH="/usr/local/heroku/bin:$PATH"
