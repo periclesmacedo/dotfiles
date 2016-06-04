@@ -18,6 +18,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'briancollins/vim-jst'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/nerdtree'
+Plugin 'rking/ag.vim'
 
 " ruby plugins
 Plugin 'slim-template/vim-slim'
@@ -33,7 +34,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'vim-ruby/vim-ruby'
 
-" hybrid theme
+" theme
 Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
@@ -43,6 +44,7 @@ call vundle#end() "required
 filetype plugin indent on "required
 
 
+" theme setup
 set t_Co=256
 colorscheme molokai
 set laststatus=2
@@ -91,11 +93,13 @@ let mapleader=","
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-map <leader>f :CtrlP<cr>
-map <leader>F :CtrlP %%<cr>
+map <leader>f :CtrlP<cr>       " map CtrlP
+map <leader>F :CtrlP %%<cr>    " map CtrlP
 
-" open nerd-tree with control-n
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>  " open nerd-tree with control-n
+
+" map Silver searcher
+map <leader>a :Ag!<space>
 
 "C-h,j,l,k navigate between split screens
 map <silent> <C-l> :wincmd l<cr> 
@@ -112,4 +116,9 @@ let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun = 0
 let vimclojure#NailgunClient = $HOME . "/.vim/bundle/VimClojure/lib/vimclojure-nailgun-client/ng"
 autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+
+" 80 character long ruler
+  if exists('+colorcolumn')
+    set colorcolumn=80
+  endif
 
