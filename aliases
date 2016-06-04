@@ -9,8 +9,4 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
-alias up="g push && be cap deploy"
-
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-
-alias c="mux clinica-simples"
