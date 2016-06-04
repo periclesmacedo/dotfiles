@@ -23,3 +23,5 @@
   editor = vim
 [help]
 	autocorrect = 1
+[credential]
+  helper = store
