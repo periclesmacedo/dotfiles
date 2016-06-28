@@ -25,3 +25,5 @@
 	autocorrect = 1
 [credential]
   helper = store
+[pull]
+	rebase = true
