@@ -12,7 +12,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nono/vim-handlebars'
 Plugin 'Rename'
-Plugin 'VimClojure'
 Plugin 'rosstimson/scala-vim-support'
 Plugin 'pangloss/vim-javascript'
 Plugin 'briancollins/vim-jst'
@@ -25,6 +24,12 @@ Plugin 'tpope/vim-surround'
 Plugin 'janko-m/vim-test'
 Plugin 'vim-scripts/tComment'
 Plugin 'tpope/vim-eunuch'
+
+" clojure plugins
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'rainbow_parentheses.vim'
 
 " ruby plugins
 Plugin 'tpope/vim-bundler'
@@ -107,13 +112,11 @@ map <silent> <C-j> :wincmd j<cr>
 map <silent> <C-k> :wincmd k<cr> 
 " Here's the vimclojure stuff. You'll need to adjust the NailgunClient
 " setting if you're on windows or have other problems.
-let vimclojure#FuzzyIndent=1
-let vimclojure#HighlightBuiltins=1
-let vimclojure#HighlightContrib=1
-let vimclojure#DynamicHighlighting=1
-let vimclojure#ParenRainbow=1
-let vimclojure#WantNailgun = 0
-let vimclojure#NailgunClient = $HOME . "/.vim/bundle/VimClojure/lib/vimclojure-nailgun-client/ng"
+let g:clojure_fuzzy_indent=1
+let g:clojure_align_multiline_strings = 1
+let g:clojure_align_subforms = 1
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
 autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 
 " 80 character long ruler
