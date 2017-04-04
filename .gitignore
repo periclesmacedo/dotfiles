@@ -1,0 +1,5 @@
+# ignore vim bundle lib imports
+/vim/bundle
+
+# ignore other uneeded files
+.DS_Store
