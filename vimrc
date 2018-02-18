@@ -29,6 +29,7 @@ Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'rainbow_parentheses.vim'
+" Plugin 'jiangmiao/auto-pairs'
 
 " ruby plugins
 Plugin 'tpope/vim-bundler'
@@ -108,14 +109,16 @@ map <silent> <C-l> :wincmd l<cr>
 map <silent> <C-h> :wincmd h<cr> 
 map <silent> <C-j> :wincmd j<cr> 
 map <silent> <C-k> :wincmd k<cr> 
-" Here's the vimclojure stuff. You'll need to adjust the NailgunClient
-" setting if you're on windows or have other problems.
+
+" clojure specific configurations
 let g:clojure_fuzzy_indent=1
 let g:clojure_align_multiline_strings = 1
 let g:clojure_align_subforms = 1
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+" clojure mappings
+au Filetype clojure nmap <leader>rc :Require<cr>
 
 " 80 character long ruler
   if exists('+colorcolumn')
@@ -131,3 +134,9 @@ autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
   autocmd InsertLeave * match ExtraWhitespace /\s\+$/
   autocmd BufWinLeave * call clearmatches()
 
+
+" Allow user to copy with Ctrl c
+"
+set clipboard=unnamedplus
+map <leader>cc :%w !xclip -i -sel c
+map <leader>cp :%w !xclip -o -sel c

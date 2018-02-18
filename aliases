@@ -8,5 +8,8 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias doc='docker-compose'
+alias dce='docker-compose exec'
+alias dcr='docker-compose run'
 
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
