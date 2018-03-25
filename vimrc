@@ -34,6 +34,7 @@ Plugin 'rainbow_parentheses.vim'
 " ruby plugins
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 
@@ -42,6 +43,7 @@ Plugin 'tomasr/molokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end() "required
 filetype plugin indent on "required
@@ -53,7 +55,7 @@ colorscheme molokai
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
-
+let g:airline#extensions#tabline#enabled = 1
 
 " general config
 
@@ -109,6 +111,9 @@ map <silent> <C-l> :wincmd l<cr>
 map <silent> <C-h> :wincmd h<cr> 
 map <silent> <C-j> :wincmd j<cr> 
 map <silent> <C-k> :wincmd k<cr> 
+
+"reload ctags
+map <leader>rt :!ctags -R --exclude=.git --exclude='*.log'<CR>
 
 " clojure specific configurations
 let g:clojure_fuzzy_indent=1
