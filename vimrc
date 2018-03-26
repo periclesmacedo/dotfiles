@@ -113,7 +113,7 @@ map <silent> <C-j> :wincmd j<cr>
 map <silent> <C-k> :wincmd k<cr> 
 
 "reload ctags
-map <leader>rt :!ctags -R --exclude=.git --exclude='*.log'<CR>
+map <leader>rt :!ctags -R --exclude=.git --exclude='*.log' --exclude='*/tmp<CR>
 
 " clojure specific configurations
 let g:clojure_fuzzy_indent=1
@@ -145,3 +145,7 @@ au Filetype clojure nmap <leader>rc :Require<cr>
 set clipboard=unnamedplus
 map <leader>cc :%w !xclip -i -sel c
 map <leader>cp :%w !xclip -o -sel c
+
+"enable mouse on nerdtree
+set mouse=a
+let g:NERDTreeMouseMode=3
