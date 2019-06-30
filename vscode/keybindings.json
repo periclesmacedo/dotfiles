@@ -14,5 +14,10 @@
         "key": "ctrl+k",
         "command": "-deleteAllRight",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+p",
+      "command": "-cursorUp",
+      "when": "textInputFocus"
     }
 ]

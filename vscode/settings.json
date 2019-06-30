@@ -1,33 +1,38 @@
 {
-    "vim.leader": ",",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [";"],
-            "after": [":"]
-        },
-        {
-            "before": ["<C-n>"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<C-h>"],
-            "commands": ["workbench.action.focusLeftGroup"]
-        },
-        {
-            "before": ["<C-j>"],
-            "commands": ["workbench.action.focusBelowGroup"]
-        },
-        {
-            "before": ["<C-k>"],
-            "commands": ["workbench.action.focusAboveGroup"]
-        },
-        {
-            "before": ["<C-l>"],
-            "commands": ["workbench.action.focusRightGroup"]
-        },
-        {
-            "before": ["<leader>", "n"],
-            "commands": ["workbench.files.action.showActiveFileInExplorer"]
-        }
-    ]
+  "editor.rulers": [80, 120],
+  "vim.leader": ",",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+    {
+      "before": ["<C-p>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+    }
+  ]
 }
