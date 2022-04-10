@@ -19,5 +19,9 @@
       "key": "ctrl+p",
       "command": "-cursorUp",
       "when": "textInputFocus"
+    },
+    { "key": "escape",
+      "command": "extension.vim_escape",
+      "when": "editorTextFocus && vim.active && !inDebugRepl"
     }
 ]
